@@ -10,28 +10,26 @@ const styles = StyleSheet.create({
   },
 });
 
-const ColorChanger = ({ setColor, colorName, color }) => (
+const ColorChanger = ({ dispatch, type }) => (
   <View>
     <View style={styles.buttonView}>
       <Button
-        title={`More ${colorName}`}
-        style={{ backgroundColor: colorName }}
-        onPress={() => {
-          if (color < 255 + 10) {
-            setColor(color + 10);
-          }
-        }}
+        title={`More ${type}`}
+        style={{ backgroundColor: type }}
+        onPress={() => dispatch({
+          type,
+          increment: 10,
+        })}
       />
     </View>
     <View style={styles.buttonView}>
       <Button
-        title={`Less ${colorName}`}
-        onPress={() => {
-          if (color > 10) {
-            setColor(color - 10);
-          }
-        }}
-        style={{ backgroundColor: colorName }}
+        title={`Less ${type}`}
+        onPress={() => dispatch({
+          type,
+          increment: -10,
+        })}
+        style={{ backgroundColor: type }}
       />
     </View>
   </View>
