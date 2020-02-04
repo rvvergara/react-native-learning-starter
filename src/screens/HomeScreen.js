@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Text, StyleSheet, View, Button, TouchableOpacity,
+  Text, StyleSheet, View, Button,
 } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -34,6 +34,22 @@ const HomeScreen = ({ navigation }) => (
       <Button
         title='Go To Image Demo'
         onPress={() => navigation.navigate('Image')}
+      />
+    </View>
+    <View
+      style={styles.buttonView}
+    >
+      <Button
+        title='Go To Counter Demo'
+        onPress={() => navigation.navigate('Counter')}
+      />
+    </View>
+    <View
+      style={styles.buttonView}
+    >
+      <Button
+        title='Go To Color Demo'
+        onPress={() => navigation.navigate('Color')}
       />
     </View>
   </View>
