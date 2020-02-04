@@ -9,14 +9,14 @@ const navigator = createStackNavigator(
     Home: HomeScreen,
     Components: ComponentsScreen,
     List: ListScreen,
-    Image: ImageScreen
+    Image: ImageScreen,
   },
   {
     initialRouteName: 'Home',
     defaultNavigationOptions: {
-      title: 'App'
-    }
-  }
+      title: 'App',
+    },
+  },
 );
 
 export default createAppContainer(navigator);
