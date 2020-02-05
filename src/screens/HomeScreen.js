@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
   },
   buttonView: {
-    marginVertical: 20,
+    marginVertical: 10,
     display: 'flex',
   },
 });
@@ -66,6 +66,14 @@ const HomeScreen = ({ navigation }) => (
       <Button
         title='Go To Text Input Demo'
         onPress={() => navigation.navigate('Text')}
+      />
+    </View>
+    <View
+      style={styles.buttonView}
+    >
+      <Button
+        title='Go To Box Demo'
+        onPress={() => navigation.navigate('Box')}
       />
     </View>
   </View>
